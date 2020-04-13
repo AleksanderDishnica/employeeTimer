@@ -1,15 +1,15 @@
+button{
+	color:white;
+	border:0;
+	padding:10px 20px;
+}
+
 .left{
 	float:left;
 }
 
 .right{
 	float:right;
-}
-
-button{
-	color:white;
-	border:0;
-	padding:10px 20px;
 }
 
 .red{
