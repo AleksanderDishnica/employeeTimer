@@ -3,17 +3,22 @@
 	 * @author Aleksander Dishnica <adishnica@yahoo.com>
 	 * @return object
 	 */
-	class ViewsController
-	{
-		public function __construct($file_name, $array){
-			$current_path = getcwd();
-echo $current_path.'\app\views\'.$file_name;
-			if(file_exists($current_path.'/app/views/'.$file_name)){
-				$file_contents = file_get_contents($_SERVER['DOCUMENT_ROOT'] . $file_name . '');
-				echo $file_contents . '<br>' . $array;
-			}
-			else{
-				echo 'File does not exist';
-			}
+	class ViewsController{
+		/**
+		 * @return Object
+		 */
+		public static function view($file_name, $items = []){
+			extract($items);
+
+			$base_dir = $_SERVER['DOCUMENT_ROOT'].'/php/3-15-2020/app/views/';
+
+			// Include header partial
+			include($base_dir.'partials/header.view.php');
+
+			// Include the desired view
+			include($base_dir.$file_name.'.view.php');
+
+			// Include footer partial
+			include($base_dir.'partials/footer.view.php');
 		}
 	}
