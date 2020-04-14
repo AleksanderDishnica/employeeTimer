@@ -1,5 +1,5 @@
 <?php
-	class Controller
+	class Controller extends ViewsController
 	{
 		public $config = [
 			'server' => 'mysqli',

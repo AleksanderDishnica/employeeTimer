@@ -10,7 +10,7 @@
 		public static function view($file_name, $items = []){
 			extract($items);
 
-			$base_dir = $_SERVER['DOCUMENT_ROOT'].'/php/3-15-2020/app/views/';
+			$base_dir = $_SERVER['DOCUMENT_ROOT'].'/javascript/4-13-2020/app/views/';
 
 			// Include header partial
 			include($base_dir.'partials/header.view.php');
