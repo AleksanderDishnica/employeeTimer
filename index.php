@@ -2,5 +2,5 @@
 	require_once 'autoload.php';
 
 	Header::show([
-		'title'=>'Calculate virus',
+		'title'=>'Track Employees',
 	]);
