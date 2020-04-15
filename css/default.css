@@ -13,9 +13,15 @@ button{
 }
 
 .red{
-	background-color:red;
+	background-color:#b00;
+}
+.red:hover{
+	background-color:#f00;
 }
 
 .green{
 	background-color:green;
+}
+.green:hover{
+	background-color:#3a3;
 }
