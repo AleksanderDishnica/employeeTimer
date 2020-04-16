@@ -1,7 +1,11 @@
 button{
+	background-color:#00b;
 	color:white;
 	border:0;
 	padding:10px 20px;
+}
+button:hover{
+	background-color:#00f;
 }
 
 .left{
