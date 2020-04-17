@@ -1,7 +1,10 @@
 <?php
 	class Controller extends ViewsController
 	{
-		public $config = [
-			'server' => 'mysqli',
-		];
+		const SERVER = 'mysqli';
+		const DIRECTORY = '123';
+
+		public function __construct(){
+
+		}
 	}

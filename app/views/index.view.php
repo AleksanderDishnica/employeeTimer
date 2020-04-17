@@ -7,3 +7,6 @@
 		<button src="" id="finish" class="red">Finish</button>
 	</div>
 </div>
+
+<?php
+	echo DIRECTORY;
