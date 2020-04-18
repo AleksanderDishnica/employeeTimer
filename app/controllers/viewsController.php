@@ -21,4 +21,8 @@
 			// Include footer partial
 			include($base_dir.'partials/footer.view.php');
 		}
+
+		public static function route($route){
+			echo 'routes/web.php';
+		}
 	}

@@ -1,5 +1,5 @@
 <div id="root">
-	<a href="./register.php">Register</a>
+	<a href=<?= self::route('header') ?>>Register</a>
 	<div class="left">
 		<button src="" id="start" class="green">Start</button>
 	</div>
@@ -7,6 +7,3 @@
 		<button src="" id="finish" class="red">Finish</button>
 	</div>
 </div>
-
-<?php
-	echo DIRECTORY;
