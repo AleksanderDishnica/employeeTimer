@@ -14,3 +14,10 @@
 	if(isset($name) && isset($surname)){
 		echo 123;
 	}
+
+	class Register
+	{
+		public function index(){
+			header('Location: /app/controllers/register.php');
+		}
+	}

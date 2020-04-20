@@ -1,2 +1,2 @@
 <?php
-	header('Location: /app/controllers/register.php');
+	Route::get('/register', 'RegisterController@index');
