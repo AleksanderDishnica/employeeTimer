@@ -5,12 +5,3 @@
 		<button class="" id="">Register</button>
 	</form>
 </div>
-
-<?php
-
-	$name = $_POST['name'];
-	$surname = $_POST['surname'];
-
-	if(isset($name) && isset($surname)){
-		echo 123;
-	}
