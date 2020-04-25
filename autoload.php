@@ -14,26 +14,35 @@
 spl_autoload_register(function ($class) {
 	// project-specific namespace prefix
 	$prefix = '';
+
 	// base directory for the namespace prefix
 	$base_dir = __DIR__ . '/app';
+
 	// does the class use the namespace prefix?
 	$len = strlen($prefix);
+
 	if (strncmp($prefix, $class, $len) !== 0) {
 		// no, move to the next registered autoloader
 		return;
 	}
+
 	// get the relative class name
 	$relative_class = substr($class, $len);
+
 	// replace the namespace prefix with the base directory, replace namespace
 	// separators with directory separators in the relative class name, append
 	// with .php
 	$file = str_replace('\\', '/', $relative_class) . '.php';
+
 	// Check which folder the file is.
 	$model = $base_dir . '/models/' . $file;
 	$view = $base_dir . '/views/' . $file;
 	$controller = $base_dir . '/controllers/' . $file;
 	// Components
 	$components = $base_dir . '/controllers/Components/' . $file;
+	// Components
+	$routes = $base_dir . '/routes/' . $file;
+
 	// if the file exists, require it
 	if(file_exists($model))
 	{
@@ -50,5 +59,9 @@ spl_autoload_register(function ($class) {
 	else if(file_exists($components))
 	{
 		require $components;
+	}
+	else if(file_exists($routes))
+	{
+		require $routes;
 	}
 });
