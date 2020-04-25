@@ -1,9 +1,14 @@
 "use strict";
 
-let today = new Date();
-let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-let dateTime = date+' '+time;
+function showTime(){
+	var today = new Date();
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	var dateTime = date+' '+time;
 
-document.getElementById('dateTime').innerHTML = dateTime;
-console.log(dateTime);
+	document.getElementById('dateTime').innerHTML = dateTime;
+
+	setTimeout(showTime, 1000);
+}
+
+showTime();
