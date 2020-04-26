@@ -9,6 +9,9 @@
 
 $request = $_SERVER['REQUEST_URI'];
 
+$request = explode('/', $request);
+$request = end($request);
+
 switch ($request) {
     case '/' :
         require __DIR__ . '/app/views/main.php';
