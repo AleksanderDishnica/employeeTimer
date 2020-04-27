@@ -19,8 +19,8 @@ switch ($request) {
     case '' :
         require __DIR__ . '/app/views/main.php';
         break;
-    case '/about' :
-        require __DIR__ . '/app/views/main.php';
+    case '/register' :
+        require __DIR__ . '/app/views/register.view.php';
         break;
     default:
         http_response_code(404);
