@@ -5,3 +5,11 @@
 		<button class="" id="">Register</button>
 	</form>
 </div>
+
+<?php
+	$name = $_POST['name'];
+	$surname = $_POST['surname'];
+
+	$mysqli = new mysqli("localhost","root","","db_employees");
+
+	$query = $mysqli->query('SELECT * FROM employees');
