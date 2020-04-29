@@ -10,6 +10,6 @@
 				echo 123;
 			}
 
-			header('Location: /app/controllers/register.php');
+			// header('Location: /app/controllers/register.php');
 		}
 	}

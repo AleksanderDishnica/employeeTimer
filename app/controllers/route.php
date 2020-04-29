@@ -8,7 +8,10 @@
 
 			$controller = $controllerMethod[0];
 			$method = $controllerMethod[1];
-			
-			var_dump($controller);
+
+			$url = explode('/', $url);
+			$url = $url[1];
+
+			var_dump('../views/'.$url.'.view.php');
 		}
 	}
