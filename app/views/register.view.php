@@ -7,8 +7,10 @@
 </div>
 
 <?php
-	$name = $_POST['name'];
-	$surname = $_POST['surname'];
+	if(isset($_POST['name'] && isset($_POST['surname']))){
+		$name = $_POST['name'];
+		$surname = $_POST['surname'];
+	}
 
 	$mysqli = new mysqli("localhost","root","","db_employees");
 

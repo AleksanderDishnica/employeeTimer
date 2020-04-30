@@ -12,6 +12,6 @@
 			$url = explode('/', $url);
 			$url = $url[1];
 
-			var_dump('../views/'.$url.'.view.php');
+			include __DIR__.'../../views/'.$url.'.view.php';
 		}
 	}
