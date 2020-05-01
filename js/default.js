@@ -12,3 +12,9 @@ function showTime(){
 }
 
 showTime();
+
+
+$('.registerTimer').click(function(e){
+	e.preventDefault();
+	console.log(document.getElementById('dateTime').innerHTML);
+});
